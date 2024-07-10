@@ -2,6 +2,7 @@
 
 Welcome to B-town Bites, your go-to web app for homemade fast food! We specialize in offering a variety of delicious homemade dishes and drinks, all available for prepaid order.
 
+Checkout the web app [https://boitekongeats.co.za/](https://boitekongeats.co.za/)
 ## Menu Highlights
 
 - **Pizza**: Freshly baked with a variety of toppings to choose from.

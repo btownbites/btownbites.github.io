@@ -1,0 +1,147 @@
+{
+  "pizzaMenu": {
+    "name": "Pizza menu",
+    "items": [
+      {
+        "name": "Russian & Cheese",
+        "image_url": "./assets/images/pizza/6.jpg",
+        "alt": "Russian & Cheese image",
+        "prices": {
+          "small": "R40",
+          "medium": "R55",
+          "large": "R90"
+        },
+        "cook_phone": "0633343249",
+        "support_phone": "0737757160"
+      },
+      {
+        "name": "Bacon & Cheese",
+        "image_url": "./assets/images/pizza/5.jpg",
+        "alt": "Bacon & Cheese image",
+        "prices": {
+          "small": "R40",
+          "medium": "R55",
+          "large": "R90"
+        },
+        "cook_phone": "0633343249",
+        "support_phone": "0737757160"
+      }
+    ]
+  },
+  "wingsMenu": {
+    "name": "Wings menu",
+    "items": [
+      {
+        "name": "4 Wings",
+        "price": "R35",
+        "image_url": "./assets/images/chicken/3.jpg",
+        "alt": "4 Wings image",
+        "cook_phone": "0633343249",
+        "support_phone": "0737757160"
+      },
+      {
+        "name": "6 Wings",
+        "price": "R50",
+        "image_url": "./assets/images/chicken/4.jpg",
+        "alt": "6 Wings image",
+        "cook_phone": "0633343249",
+        "support_phone": "0737757160"
+      },
+      {
+        "name": "8 Wings",
+        "price": "R70",
+        "image_url": "./assets/images/chicken/6.jpg",
+        "alt": "8 Wings image",
+        "cook_phone": "0633343249",
+        "support_phone": "0737757160"
+      },
+      {
+        "name": "12 Wings",
+        "price": "R95",
+        "image_url": "./assets/images/chicken/8.jpg",
+        "alt": "12 Wings image",
+        "cook_phone": "0633343249",
+        "support_phone": "0737757160"
+      },
+      {
+        "name": "Combo: 4 Wings and Chips",
+        "price": "R45",
+        "image_url": "../assets/images/chips/2.jpg",
+        "alt": "Combo: 4 Wings and Chips image",
+        "cook_phone": "0633343249",
+        "support_phone": "0737757160"
+      },
+      {
+        "name": "Combo: 6 Wings and Chips",
+        "price": "R60",
+        "image_url": "../assets/images/chips/2.jpg",
+        "alt": "Combo: 6 Wings and Chips image",
+        "cook_phone": "0633343249",
+        "support_phone": "0737757160"
+      },
+      {
+        "name": "Combo: 8 Wings and Chips",
+        "price": "R80",
+        "image_url": "../assets/images/chips/2.jpg",
+        "alt": "Combo: 8 Wings and Chips image",
+        "cook_phone": "0633343249",
+        "support_phone": "0737757160"
+      }
+    ]
+  },
+  "chipsMenu": {
+    "name": "Chips menu",
+    "items": [
+      {
+        "name": "Small Chips",
+        "price": "R20",
+        "image_url": "./assets/images/chips/1.jpeg",
+        "alt": "Small Chips image",
+        "cook_phone": "0633343249",
+        "support_phone": "0737757160"
+      },
+      {
+        "name": "Large Chips",
+        "price": "R35",
+        "image_url": "./assets/images/chips/1.jpeg",
+        "alt": "Large Chips image",
+        "cook_phone": "0633343249",
+        "support_phone": "0737757160"
+      }
+    ]
+  },
+  "magwinyaMenu": {
+    "name": "Magwinya menu",
+    "items": [
+      {
+        "name": "Magwinya (5 x R3 per fresh pack)",
+        "price": "R15",
+        "image_url": "./assets/images/magwinya/4.jpg",
+        "alt": "Magwinya image",
+        "cook_phone": "0737757160",
+        "support_phone": "0737757160"
+      },
+      {
+        "name": "Magwinya (8 x R3 per fresh pack)",
+        "price": "R24",
+        "image_url": "./assets/images/magwinya/4.jpg",
+        "alt": "Magwinya image",
+        "cook_phone": "0737757160",
+        "support_phone": "0737757160"
+      }
+    ]
+  },
+  "dikukuMenu": {
+    "name": "Dikuku menu",
+    "items": [
+      {
+        "name": "Dikuku (5 liter)",
+        "price": "R120",
+        "image_url": "./assets/images/dikuku/3.jpg",
+        "alt": "Dikuku image",
+        "cook_phone": "0737757160",
+        "support_phone": "0737757160"
+      }
+    ]
+  }
+}

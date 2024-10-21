@@ -76,25 +76,27 @@
       }
     };
 
-    const orderData = getStoredOrderData();
-    const orderNumberElement = document.getElementById('orderNumber');
-    const paymentTotalElement = document.getElementById('paymentTotal');
-    const supportPhoneElement = document.getElementById('supportPhone');
-    const spinnerElement = document.getElementById('spinner');
-    const redirectMessageElement = document.getElementById('redirectMessage');
-
-    // Initialize the order details
-    if (orderData && orderData.newOrder) {
-      orderNumberElement.innerText = orderData.newOrder.orderNumber;
-      paymentTotalElement.innerText = orderData.newOrder.paymentTotal;
-      supportPhoneElement.innerText = orderData.newOrder.supportPhone;
-    } else {
-      // If no order data, redirect to 404 (simulated by alert for now)
-      // alert("No order data found. Redirecting to 404.");
-    }
+   
 
     // Process the checkout failure on page load
     window.onload = async function () {
+      const orderData = getStoredOrderData();
+      const orderNumberElement = document.getElementById('orderNumber');
+      const paymentTotalElement = document.getElementById('paymentTotal');
+      const supportPhoneElement = document.getElementById('supportPhone');
+      const spinnerElement = document.getElementById('spinner');
+      const redirectMessageElement = document.getElementById('redirectMessage');
+
+      // Initialize the order details
+      if (orderData && orderData.newOrder) {
+        orderNumberElement.innerText = orderData.newOrder.orderNumber;
+        paymentTotalElement.innerText = orderData.newOrder.paymentTotal;
+        supportPhoneElement.innerText = orderData.newOrder.supportPhone;
+      } else {
+        // If no order data, redirect to 404 (simulated by alert for now)
+        alert("No order data found. Redirecting to 404.");
+      }
+
       spinnerElement.style.display = 'block'; // Show spinner while loading
 
       try {

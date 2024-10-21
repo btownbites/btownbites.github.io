@@ -1,39 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Order Failed</title>
-    </head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Failed</title>
+  </head>
 
-    <body>
-        <div class="redirect-container-order"
-            style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px;">
-            <h1>😔 Oops! Order Failed</h1>
-            <p>Unfortunately, we could not process your order right now.</p>
-            <p>Order Number: <strong id="orderNumber">#123456</strong></p>
-            <!-- Order number will be updated dynamically -->
-            <p>Total Payment: R<span id="paymentTotal">250.00</span></p>
-            <!-- Total payment will be updated dynamically -->
-            <p>
-                Please try again later. We’re sorry for the inconvenience!
-                🙏<br />
-                If the problem persists, contact our support team at: <strong
-                    id="supportPhone">+27 82 555 5555</strong>
-            </p>
-            <p>Thank you for your patience! 💙</p>
-            <img alt="QR Code" src="assets/images/qr_code.png"
-                class="qrcode-img"
-                style="max-width: 150px; height: 150px; margin-top: 20px; object-fit: contain;">
-            <div id="spinner"
-                style="display: none; margin-top: 20px;">Loading...</div>
-            <!-- Spinner placeholder -->
-            <p id="redirectMessage" style="display: none;">Redirecting to home
-                page in a moment...</p> <!-- Redirect message -->
-        </div>
+  <body>
+    <div class="redirect-container-order"
+      style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px;">
+      <h1>😔 Oops! Order Failed</h1>
+      <p>Unfortunately, we could not process your order right now.</p>
+      <p>Order Number: <strong id="orderNumber">N/A</strong></p>
+      <!-- Order number will be updated dynamically -->
+      <p>Total Payment: R<span id="paymentTotal">0.00</span></p>
+      <!-- Total payment will be updated dynamically -->
+      <p>
+        Please try again later. We’re sorry for the inconvenience!
+        🙏<br />
+        If the problem persists, contact our support team at: <strong
+          id="supportPhone">+(27) 69 848 8813</strong>
+      </p>
+      <p>Thank you for your patience! 💙</p>
+      <img alt="QR Code" src="assets/images/qr_code.png"
+        class="qrcode-img"
+        style="max-width: 150px; height: 150px; margin-top: 20px; object-fit: contain;">
+      <div id="spinner"
+        style="display: none; margin-top: 20px;">Loading...</div>
+      <!-- Spinner placeholder -->
+      <p id="redirectMessage" style="display: none;">Redirecting to home
+        page in a moment...</p> <!-- Redirect message -->
+    </div>
 
-        <script>
+    <script>
     // Mocking local storage and server domain for demonstration purposes
     const ServerDomain = "https://b-town-bites.onrender.com";
 
@@ -76,26 +76,27 @@
       }
     };
 
-    const orderData = getStoredOrderData();
-    const orderNumberElement = document.getElementById('orderNumber');
-    const paymentTotalElement = document.getElementById('paymentTotal');
-    const supportPhoneElement = document.getElementById('supportPhone');
-    const spinnerElement = document.getElementById('spinner');
-    const redirectMessageElement = document.getElementById('redirectMessage');
-
-    // Initialize the order details
-    if (orderData && orderData.newOrder) {
-      orderNumberElement.innerText = orderData.newOrder.orderNumber;
-      paymentTotalElement.innerText = orderData.newOrder.paymentTotal;
-      supportPhoneElement.innerText = orderData.newOrder.supportPhone;
-    } else {
-      // If no order data, redirect to 404 (simulated by alert for now)
-      alert("No order data found. Redirecting to 404.");
-    }
+    
 
     // Process the checkout failure on page load
     window.onload = async function () {
       spinnerElement.style.display = 'block'; // Show spinner while loading
+      const orderData = getStoredOrderData();
+      const orderNumberElement = document.getElementById('orderNumber');
+      const paymentTotalElement = document.getElementById('paymentTotal');
+      const supportPhoneElement = document.getElementById('supportPhone');
+      const spinnerElement = document.getElementById('spinner');
+      const redirectMessageElement = document.getElementById('redirectMessage');
+
+      // Initialize the order details
+      if (orderData && orderData.newOrder) {
+        orderNumberElement.innerText = orderData.newOrder.orderNumber;
+        paymentTotalElement.innerText = orderData.newOrder.paymentTotal;
+        supportPhoneElement.innerText = orderData.newOrder.supportPhone;
+      } else {
+        // If no order data, redirect to 404 (simulated by alert for now)
+        alert("No order data found. Redirecting to 404.");
+      }
 
       try {
         const success = await handleCheckoutFailure();
@@ -112,6 +113,6 @@
       }
     };
   </script>
-    </body>
+  </body>
 
 </html>
